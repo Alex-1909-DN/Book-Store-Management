@@ -1,0 +1,1287 @@
+/* Reset some basic default styles for consistency across browsers */
+* {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default paddings */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif; /* Use Arial font or fallback to sans-serif */
+}
+
+/*----------------------------------------------------------------*/
+/* Footer Styling */
+footer {
+  background-color: #233d4d; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center; /* Center-align the content inside the footer */
+  position: relative;
+  padding: 15px 10px; /* Add padding for comfortable spacing */
+  bottom: 0; /* Position footer at the bottom of the page */
+  width: 100%; /* Stretch footer to cover the full width of the viewport */
+  font-size: 14px;
+}
+
+footer p {
+  margin: 0; /* Remove default margin from paragraph tags */
+  line-height: 1.5; /* Add line height for improved readability */
+}
+
+/*----------------------------------------------------------------*/
+/* Navigation Bar Styles */
+
+/* Navbar styling */
+.navbar {
+  background-color: #233d4d; /* Dark background  */
+  color: #ffffff;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute space evenly between navbar items */
+  align-items: center; /* Vertically center the items */
+  padding: 10px 20px;
+  position: sticky; /* Keeps navbar at the top on scroll */
+  top: 0; /* Position the navbar at the very top of the viewport */
+  width: 100%; /* Full width of the viewport */
+  z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 30px; /* More space between the title and navigation links */
+}
+
+.user-options {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align the elements */
+  gap: 15px; /* Space between elements */
+}
+
+.user-options form {
+  margin-left: 10px;
+}
+
+.user-initials {
+  background-color: white; /* Highlight color for initials */
+  color: #386641;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 1rem; /* Round the corners for a soft look */
+  margin-right: 10px; /* Space between initials and Home link */
+  font-size: 18px;
+}
+
+.home-link {
+  color: #fff;
+  text-decoration: none; /* Remove underline for a clean look */
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 4px; /* Rounded corners for a softer design */
+}
+
+.home-link:hover {
+  background-color: #1f7a8c;
+}
+
+.signout-button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px; /* Rounded corners for a polished design */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    text-align: center;
+  }
+
+  .user-options {
+    margin-top: 10px;
+    gap: 10px; /* Adjust the gap for smaller screens */
+  }
+}
+
+/*----------------------------------------------------------------*/
+
+/* Index.html */
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  background-image: url("../images/image17.jpg"); /* https://unsplash.com */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image within the container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 3rem;
+  color: #ffe5d9;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px; /* Adds space between the two sections */
+  padding: 40px 0;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.left-section,
+.right-section {
+  flex: 1; /* Ensures both sections take up equal space in a flex container */
+  max-width: 600px; /* Sets a maximum width for responsiveness */
+  min-width: 300px; /* Ensures sections remain responsive */
+  padding: 20px;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for depth */
+  backdrop-filter: blur(10px); /* Glass effect */
+}
+
+.left-section {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center content vertically */
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(6px); /* Add a slightly blurred glass effect */
+}
+
+.left-section p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #bee9e8;
+  line-height: 1.8em; /* Add spacing between lines for better readability */
+  margin: 20px 0;
+}
+
+/* Glass effect for the form container */
+.right-section form {
+  background: rgba(255, 255, 255, 0.2); /* transparent for glass effect */
+  backdrop-filter: blur(10px); /* Blurs the background behind */
+  border-radius: 15px; /* Rounds the corners for a smooth glass effect */
+  padding: 50px 25px;
+  margin: 40px auto; /* Centers the form within the container with top/bottom spacing */
+  font-size: 1.5rem;
+  min-width: 150px; /* Ensures a minimum width for smaller screens */
+  border: 1px solid white;
+  width: 90%; /* Ensures the form takes up full container width */
+  max-width: 100%; /* Prevents the form from exceeding the container width */
+}
+
+/* Title inside the form */
+.right-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px; /* Reduced bottom margin */
+  color: #333;
+}
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between form elements */
+}
+
+/* Label Styling */
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Input Fields Styling */
+.right-section input[type="text"],
+.right-section input[type="password"],
+.right-section input[type="email"] {
+  padding: 12px;
+  margin-bottom: 5px; /* Reduced margin below input fields */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: border-color 0.3s ease; /* Smooth transition for border color change */
+}
+
+/* Submit Button Styling */
+[type="submit"] {
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* Submit Button Hover Styling */
+[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Register Link Styling */
+.register-link {
+  margin: 5px;
+  font-size: 14pt;
+  text-align: center;
+  color: white;
+}
+
+.register-link a {
+  color: white;
+  text-decoration: none; /* Remove underline for a clean look */
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline; /* Add underline for emphasis on hover */
+  color: #3adf2b;
+}
+
+/* Warning Message */
+.warning {
+  color: #c1121f;
+  font-size: 14pt;
+  margin-bottom: 2px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .detail-container {
+    flex-direction: column; /* Arrange elements vertically */
+    justify-content: center; /* Center elements vertically within the container */
+    align-items: center; /* Center elements horizontally within the container */
+  }
+
+  .right-section form {
+    width: 500px; /* Set a fixed width for the form */
+  }
+
+  .left-section p {
+    font-size: 1.2rem;
+  }
+
+  .welcome h2 {
+    font-size: 2.5rem; /* Reduce font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .left-section p,
+  label,
+  input,
+  .button,
+  .register-link {
+    font-size: 1rem; /* Scale text for smaller devices */
+  }
+
+  .right-section form {
+    width: 100%; /* Makes the form take up the full width of the container */
+    max-width: 450px; /* Limits the form's width to 450px */
+  }
+}
+
+/* Media Query for Devices with a Max Width of 480px */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px; /* Compact padding for small screens */
+    max-width: 100%;
+  }
+
+  /* Input Fields */
+  input,
+  label {
+    font-size: 0.9rem; /* Adjust font size for readability */
+  }
+
+  /* Input Fields Styling */
+  .right-section input[type="text"],
+  .right-section input[type="password"],
+  .right-section input[type="email"] {
+    font-size: 0.9rem;
+    width: 100%; /* Makes the input field take up 100% of the container's width */
+  }
+
+  /* Warning Text */
+  .warning {
+    font-size: 0.9rem; /* Smaller warning font */
+    margin-top: 5px; /* Slightly more space above warning */
+  }
+
+  .register-link a {
+    font-size: 0.9rem; /* Smaller font for the register link */
+  }
+
+  /* Adjusting the Welcome Text */
+  .welcome h2 {
+    font-size: 1.5rem; /* Reduce font size for ultra-small screens */
+  }
+}
+
+/*-----------------------------------------------*/
+/* Signup.html */
+
+.container-signup {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  background-image: url("../images/image11.jpg"); /* https://unsplash.com */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Center the image within the container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: #fff; /* Adjust text color for readability */
+}
+
+.welcome-signup {
+  text-align: center;
+  margin: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.signup-detail {
+  display: flex;
+  width: 100%;
+}
+
+.left-section-signup {
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+  margin: 50px;
+}
+
+.left-section-signup img {
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  object-fit: cover; /* Crop the image to cover the container without distortion */
+  border-radius: 10px;
+}
+
+/* Right section signup with background image */
+.right-section-signup {
+  background: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Light, semi-transparent background for glass effect */
+  backdrop-filter: blur(
+    6px
+  ); /* Adds the blur effect to create the glass effect */
+  border-radius: 10px; /* Rounded corners for the glass effect */
+  padding: 5px 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 0.6;
+  align-items: center;
+  justify-content: center;
+  max-width: 725px;
+  margin: 5px 40px;
+}
+
+.right-section-signup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.right-section-signup form {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.right-section-signup input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.terms a {
+  color: antiquewhite;
+}
+
+.signin-link {
+  margin: 10px;
+  text-align: center;
+  font-size: 14pt;
+  color: white;
+}
+
+.signin-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signin-link a:hover {
+  color: rgb(120, 202, 120);
+  text-decoration: underline;
+}
+
+/* Tablet size (481px - 1024px) */
+@media (max-width: 1024px) {
+  .container-signup {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 10px;
+  }
+
+  .signup-detail {
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    display: block;
+  }
+
+  .welcome-signup {
+    font-size: 1.2rem;
+  }
+
+  .left-section-signup {
+    display: none; /* Hide image on 1024px and below */
+  }
+
+  .warning {
+    font-size: 12pt; /* Adjust warning font size for smaller screens */
+  }
+}
+
+/* Mobile size (480px and below) */
+@media (max-width: 480px) {
+  .welcome-signup {
+    font-size: 1rem;
+  }
+
+  .warning {
+    font-size: 10pt; /* Adjust warning font size for smaller screens */
+  }
+}
+
+/*-----------------------------------------------*/
+/*Main.html */
+
+/* Main Content Section */
+main {
+  flex: 100%;
+  padding: 20px;
+}
+
+/* Search Section */
+.search-section {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  padding: 20px;
+  background-color: #ade8f4;
+  border-radius: 8px;
+}
+
+.search-section form {
+  flex-direction: row; /* Align form elements in a horizontal row */
+  justify-content: center; /* Center form elements horizontally */
+}
+
+.search-form {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  gap: 20px; /* Space between the input and button */
+  width: 100%;
+  max-width: 800px;
+}
+
+.search-bar {
+  flex: 1; /* Makes the input field take up the remaining space in the flex container */
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Prevents padding from affecting total size */
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #003d5b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevents text wrapping */
+  display: flex; /* Ensures button aligns correctly */
+  align-items: center; /* Centers content inside the button */
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Favorite books (Recommendation Section) */
+.newbook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin: 5px;
+  padding: 5px;
+  background-color: #caf0f8;
+  border-radius: 8px;
+}
+
+.newbook h2 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Flex container for main layout */
+.display {
+  display: flex;
+  justify-content: space-between; /* Space out the containers */
+  padding: 20px;
+}
+
+/* Container for all book items */
+.booklist-container {
+  gap: 20px; /* Space between book items */
+  justify-items: center; /* Center the items in each column */
+  margin-top: 20px;
+}
+
+.book-list {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns */
+  gap: 20px; /* Space between book items */
+  justify-items: center; /* Centers items in each grid cell */
+  padding: 10px;
+}
+
+/* Individual Book Item Styling */
+.book-item {
+  display: flex;
+  flex-direction: column; /* Align image, title, and actions vertically */
+  align-items: center; /* Center align the content inside each book item */
+  width: 100%;
+  border: 1px solid #ddd; /* Light border around each book item */
+  padding: 10px;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff;
+}
+
+.book-item img {
+  display: block;
+  width: 90%;
+  height: auto;
+  object-fit: cover; /* Make sure the image covers the area without distortion */
+  border-radius: 5px;
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.book-item h3 {
+  font-size: 18px;
+  text-align: center;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Container for action buttons */
+.book-actions {
+  display: flex;
+  gap: 10px; /* Space between action buttons */
+  justify-content: center; /* Align buttons in the center */
+  margin-top: 10px;
+}
+
+/* Style for Action Buttons */
+.action-button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.action-button:hover {
+  background-color: #45a049;
+}
+
+/* Hover effect for the book item */
+.book-item:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Tablet or Mobile screens (1024px and below) */
+@media (max-width: 1024px) {
+  .book-list {
+    grid-template-columns: repeat(3, 1fr); /* 2 columns of books */
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .book-item {
+    width: 90%; /* Make each book item take up most of the width */
+    margin-bottom: 20px;
+  }
+
+  .book-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Tablet Screens (768px and below) */
+@media (max-width: 768px) {
+  .book-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns of books */
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .book-item {
+    width: 100%; /* Make each book item take up most of the width */
+    margin-bottom: 20px;
+  }
+
+  .book-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-list {
+    grid-template-columns: 1fr; /* 1 column of books */
+  }
+}
+
+/*-------------------------------------*/
+
+/* detail.html  */
+
+#book-detail {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.book-cover img {
+  width: 90%;
+  margin: 20px 100px 20px 20px;
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+.book-info {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #edede9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.book-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.book-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #355070;
+}
+
+#rating {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+#stars {
+  color: #ff9900;
+}
+
+.overview {
+  margin-top: 20px;
+}
+
+.overview h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0fa3b1;
+}
+
+#bookOverview {
+  font-size: 16px;
+  line-height: 1.6; /* Improve readability by increasing line spacing */
+  color: #333;
+  margin-bottom: 20px;
+  overflow: hidden; /* Prevent text from spilling outside the box */
+}
+
+/* Rate & Review Form Styling */
+#rate-review {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+#rate-review h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ec970d;
+}
+
+#rate-review label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+#rate-review select,
+#rate-review textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#rate-review button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#rate-review button:hover {
+  background-color: #218838;
+}
+
+/*-----------------------------------*/
+/* Rating and review from users */
+
+/* Review Section Styling */
+#reviews {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+#reviews h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #0fa3b1;
+  text-align: center;
+}
+
+/* Review Box Styling */
+.review-box {
+  background-color: #edede9;
+  max-width: 800px;
+  padding: 15px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly with space between */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-header strong {
+  font-size: 20px;
+  color: #116860;
+}
+
+.review-rating {
+  font-size: 18px;
+  color: #ff9900;
+}
+
+.review-body p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6; /* Improve readability by increasing line spacing */
+  margin-top: 10px;
+}
+
+.no-review {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  #book-detail {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center items vertically */
+  }
+
+  .book-cover {
+    width: 90%; /* Set width to 80% for responsive resizing */
+    max-width: 400px; /* Ensure the image doesn't stretch too large */
+    margin: 0 auto 20px auto; /* Center the image horizontally */
+    display: block; /* Ensure the image behaves as a block-level element */
+  }
+
+  .book-info {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-info {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .book-info h2,
+  .overview h3 {
+    font-size: 1.4rem; /* Adjust font size */
+  }
+
+  .book-info p {
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  #rate-review h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/*--------------------------*/
+/* Addnew.html  */
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical; /* Allows the textarea to be resized only vertically */
+}
+
+/* Add Book Section Styles */
+
+.addnew-page {
+  background-image: url("../images/image1.jpg"); /* https://unsplash.com */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-size: cover; /* Ensures the image covers the whole page */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  height: 100vh; /* Make sure the background takes up the full height of the viewport */
+}
+
+#add-book-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+#add-book-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#add-book-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-book-section form label {
+  margin-top: 10px;
+}
+
+#add-book-section form input,
+#add-book-section form select,
+#add-book-section form textarea {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+#add-book-section form button {
+  align-self: center;
+  margin-top: 20px;
+  width: auto;
+}
+
+/*--------------------------*/
+/* Update.html  */
+
+/* General Styles for Update Page */
+#book-update {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 800px; /* Limits the width to 800px */
+  margin: 40px auto; /* Centers the section horizontally with top/bottom margin */
+}
+
+#book-update h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Styles */
+#book-update form {
+  display: flex;
+  flex-direction: column;
+}
+
+#book-update form label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+#book-update form input[type="text"],
+#book-update form input[type="email"],
+#book-update form input[type="number"],
+#book-update form textarea,
+#book-update form select {
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+#book-update form textarea {
+  resize: vertical; /* Allows the textarea to be resized vertically */
+  height: 150px;
+}
+
+#book-update form button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  width: auto;
+  margin-top: 20px;
+}
+
+#book-update form button:hover {
+  background-color: #45a049;
+}
+
+/*-------------------------------------------*/
+/*  Update.php*/
+
+/* Fixed background image for update.php only */
+.update-page {
+  background-image: url("../images/image1.jpg"); /* https://unsplash.com */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-size: cover; /* Ensures the image covers the whole page */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  height: 100vh; /* Make sure the background takes up the full height of the viewport */
+}
+
+/* Style for main content if necessary */
+.update-page main {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Add a slight white overlay for text readability */
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/*-----------------------------------------------*/
+/*  Show.php  */
+
+/* Page Styling */
+.page {
+  max-width: 1000px; /* Limits the width to 1000px */
+  margin: 30px auto; /* Centers the page horizontally with top and bottom margin */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 8px;
+}
+
+.page h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Attribute List Styling */
+.attributes {
+  margin-top: 20px;
+}
+
+.attributes dl {
+  display: flex;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.attributes dt {
+  font-weight: bold;
+  color: #444;
+  width: 150px;
+  font-size: 18px;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 150px; /* Set consistent width */
+}
+
+.attributes dd {
+  color: #555;
+  margin-left: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* Fixed background image for update.php only */
+.show-page {
+  background-image: url("../images/image15.jpg"); /* https://unsplash.com */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-size: cover; /* Ensures the image covers the whole page */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  height: 100vh; /* Make sure the background takes up the full height of the viewport */
+}
+
+/* Styles for the head-show section */
+.head-show {
+  background-color: #f4f4f9; /* Light gray background */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 500px;
+  margin: 60px auto; /* Center align with some margin on top and bottom */
+  text-align: center; /* Center-align text */
+}
+
+.head-show p {
+  font-size: 1.2em; /* Slightly larger text for the success message */
+  color: #284b63; /* Green color to indicate success */
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.head-show a.back-link {
+  display: inline-block; /* Makes the link behave like a block element */
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none; /* Remove underline */
+}
+
+.head-show a.back-link:hover {
+  background-color: #7bd47f;
+}
+
+/* Add responsiveness for smaller screens */
+
+@media (max-width: 768px) {
+  .page.show {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .attributes dl {
+    flex-direction: column;
+  }
+
+  .attributes dt {
+    font-size: 1.1rem;
+  }
+
+  .attributes dd {
+    font-size: 1rem;
+  }
+
+  .head-show .back-link {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet or smaller screens (768px - 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .attributes dt {
+    font-size: 1rem;
+  }
+
+  .attributes dd {
+    font-size: 0.9rem;
+  }
+
+  .page.show {
+    padding: 10px;
+  }
+}
+
+/*------------------------------------------------------------*/
+/*  Delete.php  */
+
+/* Section Styling */
+.delete-page {
+  background-image: url("../images/image14.jpg"); /* https://unsplash.com */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  background-size: cover; /* Ensures the image covers the whole page */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+  height: 100vh; /* Make sure the background takes up the full height of the viewport */
+}
+
+#book-delete {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#book-delete h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0 70px 0;
+  color: #c82333;
+}
+
+.delete-confirm p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.delete-detail {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-detail p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Button Styling */
+.delete-button {
+  display: inline-block; /* Makes the button behave like an inline-block element */
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+a.back-link {
+  display: inline-block; /* Makes the link behave like a block element */
+  background-color: #28a745;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none; /* Remove underline */
+}
+
+a.back-link:hover {
+  background-color: #7bd47f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #book-delete {
+    width: 90%; /* Use more space on medium screens */
+  }
+
+  button {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive Styles for Small Screens (Max Width: 480px) */
+@media (max-width: 480px) {
+  #book-delete {
+    width: 100%; /* Full width on small screens */
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .delete-detail p {
+    font-size: 1rem; /* Slightly larger text for readability */
+  }
+}
